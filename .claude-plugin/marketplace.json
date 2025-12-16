@@ -8,6 +8,11 @@
       "name": "nbp-prompt-crafter",
       "source": "./plugins/nbp-prompt-crafter",
       "description": "Crafts optimized image generation prompts for Nano-Banana Pro (Google Gemini) following official prompting best practices"
+    },
+    {
+      "name": "github-context-gatherer",
+      "source": "./plugins/github-context-gatherer",
+      "description": "Recursively gathers GitHub context from issues and pull requests using `gh view-md` for rich, LLM-optimized markdown output"
     }
   ]
 }
