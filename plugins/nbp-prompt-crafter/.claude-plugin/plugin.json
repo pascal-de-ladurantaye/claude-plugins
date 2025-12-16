@@ -1,6 +1,6 @@
 {
   "name": "nbp-prompt-crafter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Crafts optimized image generation prompts for Nano-Banana Pro (Google Gemini) following official prompting best practices",
   "author": {
     "name": "Pascal de Ladurantaye"
