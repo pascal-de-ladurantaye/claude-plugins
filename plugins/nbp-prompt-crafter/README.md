@@ -1,3 +1,5 @@
+![image](assets/heading.png)
+
 # NBP Prompt Crafter
 
 Crafts optimized image generation prompts for Nano-Banana Pro (Google Gemini) following official prompting best practices.
@@ -11,8 +13,10 @@ Crafts optimized image generation prompts for Nano-Banana Pro (Google Gemini) fo
 
 ## Components
 
-- **Skill**: `nbp-prompting` - Knowledge base of prompting patterns and best practices
+- **Skill**: `nbp-prompting` - Knowledge base of prompting patterns and best practices (auto loaded in the agent)
 - **Agent**: `prompt-crafter` - Analyzes ideas, asks clarifying questions, generates structured prompts
+
+Only the subagent is meant to be used through this plugin, it will auto-load the Skill to better manage context of the main agent.
 
 ## Usage
 

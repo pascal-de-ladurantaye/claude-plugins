@@ -1,6 +1,6 @@
 ---
 name: NBP Prompting Guide
-description: This skill should be used when the user asks to "craft an image prompt", "create a prompt for Gemini", "generate an image prompt", "write a prompt for Nano-Banana Pro", "help with image generation prompting", "improve my image prompt", or needs guidance on Nano-Banana Pro (Google Gemini) image generation best practices, infographics creation, or structured prompt crafting.
+description: This skill should never be used
 version: 0.1.0
 ---
 
