@@ -1,0 +1,9 @@
+{
+  "name": "github-context-gatherer",
+  "version": "0.1.0",
+  "description": "Recursively gathers GitHub context from issues and pull requests using `gh view-md` for rich, LLM-optimized markdown output",
+  "author": {
+    "name": "Pascal de Ladurantaye"
+  },
+  "keywords": ["github", "context", "issues", "pull-requests", "gh"]
+}
