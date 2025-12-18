@@ -1,7 +1,7 @@
 ---
 name: NBP Prompting Guide
 description: This skill should never be used
-version: 0.1.0
+version: 0.2.0
 ---
 
 # Nano-Banana Pro Prompting Guide
@@ -27,6 +27,9 @@ Treat NBP like briefing a human creative professional. Use complete sentences an
 ### 3. Specificity and Description
 
 Replace vague references with concrete details. Include textures, materials, and precise descriptors.
+
+**Anti-pattern:** "fantasy armor"
+**Correct approach:** "ornate elven plate armor, etched with silver leaf patterns, with a high collar and pauldrons shaped like falcon wings"
 
 **Anti-pattern:** "a woman"
 **Correct approach:** "a sophisticated elderly woman in a vintage Chanel-style suit"
@@ -66,6 +69,8 @@ Maintain facial identity across scenarios using reference images.
 
 **Key instruction:** "Keep the person's facial features exactly the same as Image 1"
 
+When referencing multiple images, always use numbered references (Image 1, Image 2, etc.) corresponding to the order they were provided.
+
 Supports up to 14 reference images (6 with enhanced fidelity). Explicitly state identity preservation while describing emotional or postural changes.
 
 ### 3-9. Additional Capabilities
@@ -79,20 +84,62 @@ For detailed guidance on remaining capability areas, consult `references/capabil
 - Sequential Narrative
 - Structural Layout Control
 
-## Structured Output Format
+## Advanced Techniques
 
-When crafting prompts, produce output in this structured format:
+### Step-by-Step Scene Construction
+
+For complex scenes with many elements, break prompts into sequential steps. This gives NBP clear layering and composition guidance.
+
+**Example:** "First, create a background of a serene, misty forest at dawn. Then, in the foreground, add a moss-covered ancient stone altar. Finally, place a single, glowing sword on top of the altar."
+
+**When to use:** Scenes with 3+ distinct elements, complex spatial relationships, or layered compositions.
+
+### Semantic Negative Prompts
+
+Never use negative phrasing ("no cars", "without people"). Instead, describe the desired state positively.
+
+**Anti-pattern:** "a street with no cars"
+**Correct approach:** "an empty, deserted street with no signs of traffic"
+
+**Anti-pattern:** "a forest without any buildings"
+**Correct approach:** "a pristine, untouched wilderness forest"
+
+NBP responds better to positive descriptions of what IS present rather than what is absent.
+
+### Camera and Composition Control
+
+Use photographic and cinematic terminology to control framing, angle, and depth.
+
+**Framing terms:**
+- Wide-angle shot, establishing shot - show full environment
+- Medium shot - subject from waist up
+- Close-up, extreme close-up - face or detail focus
+- Macro shot - extreme detail of small objects
+
+**Angle terms:**
+- Low-angle perspective - looking up at subject, conveys power
+- High-angle shot - looking down, conveys vulnerability
+- Dutch angle - tilted frame, conveys unease
+- Eye-level - neutral, relatable
+
+**Depth terms:**
+- Shallow depth of field - blurred background, subject focus
+- Deep focus - everything sharp
+- Bokeh - aesthetic blur quality
+
+**Example:** "A low-angle shot of a samurai warrior, shallow depth of field with bokeh city lights in the background"
+
+## Output Format
+
+Output the prompt directly, followed by edit suggestions. No other commentary.
 
 ```
-## Prompt
-[The complete, crafted prompt following all golden rules]
+[The complete, verbose prompt following all golden rules]
 
-## Metadata
-- **Aspect Ratio**: [16:9 | 1:1 | 4:3 | 9:16 | 3:2 | 2:3]
-- **Resolution**: [1K | 2K | 4K]
-- **Capability Area**: [Which of the 9 areas this prompt targets]
-- **Edit Refinements**: [2-3 suggested modifications for iteration]
+**Edit suggestions:** [2-3 specific modifications for iteration]
 ```
+
+**Critical:** The prompt itself must be verbose and detailed. Pack in specificity - materials, textures, lighting, camera angles, composition. A good prompt is typically 2-4 sentences minimum. Never output a terse prompt.
 
 ## Aspect Ratio Selection
 
@@ -144,6 +191,9 @@ When crafting prompts, produce output in this structured format:
 | Missing context | No audience/purpose info | State intended use |
 | Over-regeneration | Wastes time on 80% good images | Request specific edits |
 | Generic textures | "shiny" is vague | "brushed aluminum with fingerprint smudges" |
+| Negative phrasing | "no X" confuses the model | Describe desired state positively |
+| Flat composition | No camera/angle direction | Use photographic terminology |
+| Monolithic prompts | Complex scenes in one sentence | Break into step-by-step layers |
 
 ## Additional Resources
 
