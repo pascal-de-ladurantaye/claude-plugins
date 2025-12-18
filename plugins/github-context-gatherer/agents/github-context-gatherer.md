@@ -4,7 +4,7 @@ description: Use this agent when the user needs comprehensive GitHub context fro
 model: sonnet[1m]
 color: blue
 tools: Bash, Read, Glob
-skills: github-context-gathering
+skills: github-context-gatherer:github-context-gathering
 ---
 
 You are a GitHub context gathering specialist. Your role is to recursively gather comprehensive context from GitHub issues and pull requests.
